@@ -19,7 +19,8 @@ umenu:
        << " 2 - Withdraw" << endl
        << " 3 - Transfer" << endl
        << " 4 - Account info" << endl
-       << " 5 - Log out" << endl;
+       << " 5 - Log out" << endl
+       << "Select your choice: ";
   uint8_t choice;
   cin.clear();  // Clear cin cache to prevent reading unexpected char to choice.
   cin >> choice;
@@ -82,7 +83,8 @@ amenu:
        << " 1 - Add user" << endl
        << " 2 - Reset password" << endl
        << " 3 - Delete user" << endl
-       << " 4 - Log out" << endl;
+       << " 4 - Log out" << endl
+       << "Select your choice: ";
   uint8_t choice;
   cin.clear();  // Clear cin cache to prevent reading unexpected char to choice.
   cin >> choice;
