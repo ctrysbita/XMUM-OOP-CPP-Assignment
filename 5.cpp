@@ -36,7 +36,7 @@ class Matrix {
 
   friend Matrix operator+(const Matrix &me, const Matrix &other) {
     if (other.rows != me.rows || other.cols != me.cols) {
-      throw exception("cannot add two matrix with different size");
+      cout << "Cannot add two matrix with different size" << endl;
       return me;
     }
 
@@ -49,14 +49,14 @@ class Matrix {
   }
 };
 
-int main5() {
+int main() {
   size_t cols, rows;
   cout << "Please enter the size of first Matrix: ";
   // MSVC compiler use scanf_s instead scanf due to security problem.
 #ifdef _MSC_VER
-  scanf_s("%ldx%ld", &cols, &rows);
+  scanf_s("%zux%zu", &cols, &rows);
 #else
-  scanf("%ldx%ld", &cols, &rows);
+  scanf("%zux%zu", &cols, &rows);
 #endif
   Matrix m1(cols, rows);
   m1.display();
@@ -64,9 +64,9 @@ int main5() {
   cout << "Please enter the size of second Matrix: ";
   // MSVC compiler use scanf_s instead scanf due to security problem.
 #ifdef _MSC_VER
-  scanf_s("%ldx%ld", &cols, &rows);
+  scanf_s("%zux%zu", &cols, &rows);
 #else
-  scanf("%ldx%ld", &cols, &rows);
+  scanf("%zux%zu", &cols, &rows);
 #endif
   Matrix m2(cols, rows);
   m2.display();
